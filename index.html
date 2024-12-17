@@ -1,126 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Aki's Portfolio | Activity 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>2025 Calendar | Activity 2</title>
   </head>
   <body>
     <nav>
       <div class="nav__content">
-        <div class="logo"><a href="#Home">Aki's Portfolio</a></div>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
+        <div class="logo"><a href="/index.html#Home">2025 Calendar</a></div>
         <ul>
-          <li><a href="#Background">Background</a></li>
-          <li><a href="#Skills">Skills</a></li>
+          <li><a href="/index.html#Section1">Months</a></li>
+          <li class="dropdown">
+            <a href="#Section2">Holidays</a>
+            <ul class="dropdown-content">
+              <li class="dropdown-submenu">
+                <a href="#">January</a>
+                <ul class="submenu-content">
+                  <li><a href="#">New Year's Day</a></li>
+                  <li><a href="#">First Philippine Republic Day</a></li>
+                  <li><a href="#">Lunar New Year's Day</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+              <a href="#">February</a>
+                <ul class="submenu-content">
+                  <li><a href="#">Valentine's Day</a></li>
+                  <li><a href="#">People Power Anniversary</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+              <a href="#">March</a>
+                <ul class="submenu-content">
+                  <li><a href="#">Start of Ramadan</a></li>
+                  <li><a href="#">Eidul-Fitar</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">April</a>
+                  <ul class="submenu-content">
+                    <li><a href="#">The Day of Valor</a></li>
+                    <li><a href="#">Maundy Thursday</a></li>
+                    <li><a href="#">Good Friday</a></li>
+                    <li><a href="#">Black Saturday</a></li>
+                    <li><a href="#">Easter Sunday</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">May</a>
+                  <ul class="submenu-content">
+                    <li><a href="#">Labor Day</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">June</a>
+                  <ul class="submenu-content">
+                    <li><a href="#">Eid al-Adha</a></li>
+                    <li><a href="#">Independence Day</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">August</a>
+                  <ul class="submenu-content">
+                    <li><a href="#">Ninoy Aquino Day</a></li>
+                    <li><a href="#">National Heroes Day</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">September</a>
+                  <ul class="submenu-content">
+                    <li><a href="#">Yamashita Surrender Day</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">November</a>
+                  <ul class="submenu-content">
+                    <li><a href="#">All Saints' Day</a></li>
+                    <li><a href="#">All Souls' Day</a></li>
+                    <li><a href="#">Bonifacio Day</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">December</a>
+                  <ul class="submenu-content">
+                    <li><a href="#">Feast of the Immaculate Conception</a></li>
+                    <li><a href="#">Christmas Eve</a></li>
+                    <li><a href="#">Christmas Day</a></li>
+                    <li><a href="#">Rizal Day</a></li>
+                    <li><a href="#">New Year's Eve</a></li>
+                  </ul>
+              </li>
+          </li>
         </ul>
+        <li><a href=#>Contacts</a></li>
       </div>
-    </nav>
+    </nav>    
     <section id="Home" class="section">
       <div class="section__container">
-        <div class="image">
-          <img src="assets/profile.jpg" alt="profile" />
-        </div>
         <div class="content">
-          <p class="subtitle">Hello! I am</p>
-          <h1 class="title">
-            <span>Ericka Marie Mejor<br />a</span> BSIT Student
-          </h1>
+          <h1 class="LandingPagetitle">2025 Calendar</h1>
           <p class="description">
-            Welcome to my e-portfolio! I'm Ericka Marie M. Mejor, you can
-            call me <b>Aki</b>. I am a 3rd year IT student, studying at the 
-            Polytechnic University of the Philippines, and a creative at heart.
-            I am a skilled Graphic Designer and an enthusiastic Programmer.
+            Welcome! This website provides a complete, easy-to-navigate view of all the months and dates for the year 2025. Whether you're tracking holidays, or simply exploring the calendar, you'll find every month and day beautifully organized and accessible.
           </p>
-          <div class="action__btns">
-            <button class="github"><a href="https://github.com/AkiMejor">Github</a></button>
-            <button class="portfolio"><a href="assets/Mejor, ErickaMarie-Resume.pdf">Download CV</a></button>
-          </div>
         </div>
       </div>
     </section>
-    <section id="Background">
+    <section id="Section1">
       <div class="about">
         <div class="title__container">
-          <p>Get To Know <b>Aki's</b></p>
-          <h1 class="title"><b>Background</b></h1>
-          <p class="title-para">Motivated and results-driven third-year student in Information Technology with proficient skills in
-            programming and editing. She seeks to improve her skills in programming and create solutions that can help
-            other. Additionally, a capable and responsible student leader who leads her various committees and teams
-            with mutual respect and aspire to foster community and camaraderie with her organizations.</p>
+          <h1 class="title"><b>Months List</b></h1>
+          <p class="title-description">
+            Explore the complete calendar for 2025, showcasing all months with their respective dates and holidays. This user-friendly layout highlights special days, making it easy to plan your year at a glance. Click on any highlighted holiday to learn more about its significance!
+          </p>
         </div>
-        <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
-                <h2>Education</h2>
-                <p><b class="deet-title">Polytechnic University of the Philippines</b><br />Bachelor of Science in Information Technology
-                  <br />Consistent President’s Lister awardee.<br />DOST Scholar</p>
-                <p><b>Caloocan City Science High School</b><br />Science, Technology, Engineering, and Mathematics
-                  <br />Academic Achiever (with High Honor) awardee.</p>
-                <p class="deet-end"><b>Tandang Sora Integrated School</b><br />Elementary and Junior High School
-                  <br />Completed as the Salutatorian of the class.</p>
-              </div>
-              <div class="details-container">
-                <h2>Organizations</h2>
-                <p><b class="deet-title">PUP Kasarianlan</b><br />
-                  Externas Creative Co-Famhead<br />
-                  PUP Pride 2024 Organizer</p>
-                <p><b class="deet-title">Cisco NetConnect - PUP Manila</b><br />
-                  Chief Creatives Officer<br /></p>
-                <p><b class="deet-title">AWS Cloud Club PUP</b><br />
-                    Member of Web Development Department<br />
-                    Skill-Builder Cadet</p>
-                <p class="deet-end"><b class="deet-title">Google Developer Groups - PUP</b><br />
-                      Data & ML Team Member</p>
-              </div>
-            </div>
-          </div>
+        <div id="calendar">
+          <div id="months-container"></div>
+        </div>
+        <script src="javascript.js"></script>
       </div>
     </section>
-    <section id="Skills">
-      <div class="about">
-        <div class="title__container">
-          <p>Get To Know <b>Aki's</b></p>
-          <h1 class="title"><b>Technical Skills</b></h1>
-        </div>
-        <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
-                <h2>Programming Languages</h2>
-                <p>C<br />
-                C++<br />
-                Python<br />
-                Java</p>
-              </div>
-              <div class="details-container">
-                <h2>Editing Applications</h2>
-                <p class="deet-end">Photoshop<br />
-                  Illustrator<br />
-                  Premiere Pro<br />
-                  After Effects<br />
-                  Canva<br />
-                  Figma</p>
-              </div>
-              <div class="details-container">
-                <h2>Web Development Tools</h2>
-                <p class="deet-end">HTML<br />
-                CSS<br />
-                JavaScript</p>
-              </div>
-            </div>
-          </div>
+    <section class="Footer">
+      <div class="Footer-container">
+        <p>Web Development</p>
+        <p>© 2024 Ericka Marie M. Mejor</p>
+        <p>Activity 2</p>
       </div>
     </section>
   </body>

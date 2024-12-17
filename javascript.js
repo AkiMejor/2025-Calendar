@@ -1,14 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const nav = document.querySelector("nav");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) { // Adjust threshold as needed
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
-  
   const monthsContainer = document.getElementById("months-container");
     const monthNames = [
       "January", "February", "March", "April", "May", "June",
@@ -17,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const holidays = {
       "0-1": {name: "New Year's Day", page: "c0-1.html"},
-      "0-23": {name: "First Philippine Republic Day", page: "c0-23.html"},
       "0-29": {name: "Lunar New Year's Day", page: "c0-29.html"},
       "1-14": {name: "Valentine's Day", page: "c1-14.html"},
       "1-25": {name: "People Power Anniversary", page: "c1-25.html"},
@@ -33,12 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "5-12": {name: "Independence Day", page: "c5-12.html"},
       "7-21": {name: "Ninoy Aquino Day", page: "c7-21.html"},
       "7-25": {name: "National Heroes Day", page: "c7-25.html"},
-      "8-3": {name: "Yamashita Surrender Day", page: "c8-3.html"},
       "10-1": {name: "All Saints' Day", page: "c10-1.html"},
       "10-2": {name: "All Souls' Day", page: "c10-2.html"},
       "10-30": {name: "Bonifacio Day", page: "c10-30.html"},
-      "11-8": {name: "Feast of the Immaculate Conception", page: "c11-8.html"},
-      "11-24": {name: "Christmas Eve", page: "c11-24.html"},
       "11-25": {name: "Christmas Day", page: "c11-25.html"},
       "11-30": {name: "Rizal Day", page: "c11-30.html"},
       "11-31": {name: "New Year's Eve", page: "c11-31.html"},

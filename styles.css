@@ -182,12 +182,26 @@ ul li a:hover {
   margin-bottom: 1rem;
 }
 
+.holiday-title {
+  font-family: "Pinyon Script";
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1em;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
 .description {
   color: var(--text-light);
 }
 
 .title-description {
   color: var(--text-light);
+}
+
+.holiday-description {
+  color: var(--text-light);
+  padding-top: 1em;
 }
 
 .action__btns {
@@ -249,6 +263,12 @@ ul li a:hover {
   justify-content: center;
   text-align: center;
   padding: 7em 10em;
+}
+
+.holiday__container {
+  justify-content: center;
+  text-align: center;
+  padding: 8em 4em 5em 4em;
 }
 
 #calendar {
@@ -319,4 +339,16 @@ ul li a:hover {
   top: 0;
   left: 100%;
   margin-top: -1px;
+}
+
+.img_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
 }

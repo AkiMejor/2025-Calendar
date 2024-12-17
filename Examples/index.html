@@ -1,40 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>2025 Calendar | Activity 2</title>
-  </head>
-  <body>
-    <div class="navbar">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <div class="dropdown">
-        <button class="dropbtn">Dropdown
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <div class="dropdown-submenu">
-            <a href="#">Link 1</a>
-            <div class="submenu-content">
-              <a href="#">Link 1 Drop 1</a>
-              <a href="#">Link 1 Drop 2</a>
-              <a href="#">Link 1 Drop 3</a>
-            </div>
-          </div>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grouped Holidays Navigation</title>
+  <style>
+    /* Simple Navigation Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #004643;
+      color: white;
+      padding: 10px;
+    }
+    .nav__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    li {
+      margin: 0 10px;
+      position: relative;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 5px;
+      display: block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #abd1c6;
+      min-width: 200px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: #001e1d;
+      padding: 8px 10px;
+    }
+    .dropdown-content a:hover {
+      background-color: #e8e4e6;
+    }
+    .submenu-content {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background-color: #e8e4e6;
+      min-width: 200px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .dropdown-submenu:hover .submenu-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo">
+        <a href="#Home">2025 Calendar</a>
       </div>
+      <ul>
+        <li><a href="#Months">Months</a></li>
+        <li class="dropdown">
+          <a href="#">Holidays</a>
+          <ul class="dropdown-content" id="holidays-menu">
+            <!-- JavaScript will populate the holidays grouped by month -->
+          </ul>
+        </li>
+      </ul>
     </div>
-  </body>
+  </nav>
+
+  <script>
+    // Holidays Object
+    const holidays = {
+      "0-1": { name: "New Year's Day", page: "c0-1.html" },
+      "0-29": { name: "Lunar New Year's Day", page: "c0-29.html" },
+      "1-14": { name: "Valentine's Day", page: "c1-14.html" },
+      "1-25": { name: "People Power Anniversary", page: "c1-25.html" },
+      "2-1": { name: "Start of Ramadan", page: "c2-1.html" },
+      "2-31": { name: "Eidul-Fitar", page: "c2-31.html" },
+      "3-9": { name: "The Day of Valor", page: "c3-9.html" },
+      "3-17": { name: "Maundy Thursday", page: "c3-17.html" },
+      "3-18": { name: "Good Friday", page: "c3-18.html" },
+      "3-19": { name: "Black Saturday", page: "c3-19.html" },
+      "3-20": { name: "Easter Sunday", page: "c3-20.html" },
+      "4-1": { name: "Labor Day", page: "c4-1.html" },
+      "5-7": { name: "Eid al-Adha", page: "c5-7.html" },
+      "5-12": { name: "Independence Day", page: "c5-12.html" },
+      "7-21": { name: "Ninoy Aquino Day", page: "c7-21.html" },
+      "7-25": { name: "National Heroes Day", page: "c7-25.html" },
+      "8-3": { name: "Yamashita Surrender Day", page: "c8-3.html" },
+      "10-1": { name: "All Saints' Day", page: "c10-1.html" },
+      "10-2": { name: "All Souls' Day", page: "c10-2.html" },
+      "10-30": { name: "Bonifacio Day", page: "c10-30.html" },
+      "11-8": { name: "Feast of the Immaculate Conception", page: "c11-8.html" },
+      "11-24": { name: "Christmas Eve", page: "c11-24.html" },
+      "11-25": { name: "Christmas Day", page: "c11-25.html" },
+      "11-30": { name: "Rizal Day", page: "c11-30.html" },
+      "11-31": { name: "New Year's Eve", page: "c11-31.html" },
+    };
+
+    // Group Holidays by Month
+    const holidaysByMonth = {};
+
+    for (const key in holidays) {
+      const month = key.split("-")[0]; // Extract the month part (e.g., "0", "1")
+      if (!holidaysByMonth[month]) {
+        holidaysByMonth[month] = [];
+      }
+      holidaysByMonth[month].push(holidays[key]);
+    }
+
+    // Dynamically Generate Navigation Menu
+    const holidaysMenu = document.getElementById("holidays-menu");
+
+    for (const month in holidaysByMonth) {
+      const monthLi = document.createElement("li");
+      monthLi.classList.add("dropdown-submenu");
+
+      // Month name
+      const monthName = getMonthName(parseInt(month));
+      const monthAnchor = document.createElement("a");
+      monthAnchor.href = "#";
+      monthAnchor.textContent = monthName;
+
+      // Submenu for holidays
+      const submenu = document.createElement("ul");
+      submenu.classList.add("submenu-content");
+
+      // Add holidays to the submenu
+      holidaysByMonth[month].forEach(holiday => {
+        const holidayLi = document.createElement("li");
+        const holidayAnchor = document.createElement("a");
+        holidayAnchor.href = holiday.page;
+        holidayAnchor.textContent = holiday.name;
+
+        holidayLi.appendChild(holidayAnchor);
+        submenu.appendChild(holidayLi);
+      });
+
+      // Combine elements
+      monthLi.appendChild(monthAnchor);
+      monthLi.appendChild(submenu);
+      holidaysMenu.appendChild(monthLi);
+    }
+
+    // Helper function to get month names
+    function getMonthName(index) {
+      const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+      return months[index];
+    }
+  </script>
+</body>
 </html>
